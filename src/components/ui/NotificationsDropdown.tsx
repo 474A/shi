@@ -18,29 +18,29 @@ const mockNotifications: Notification[] = [
   {
     id: '1',
     type: 'alert',
-    message: 'Microscope #OLY-2023-1234 is due for maintenance',
-    time: '2 hours ago',
+    message: '显微镜 #OLY-2023-1234 需要进行维护',
+    time: '2小时前',
     read: false
   },
   {
     id: '2',
     type: 'reminder',
-    message: 'Your reservation for Digital Camera has been approved',
-    time: '1 day ago',
+    message: '您预约的数码相机已获批准',
+    time: '1天前',
     read: false
   },
   {
     id: '3',
     type: 'success',
-    message: 'Laptop #APPLE-2022-5678 has been returned successfully',
-    time: '3 days ago',
+    message: '笔记本电脑 #APPLE-2022-5678 已成功归还',
+    time: '3天前',
     read: true
   },
   {
     id: '4',
     type: 'alert',
-    message: 'VR Headset #OCU-2023-4567 is overdue for return',
-    time: '5 days ago',
+    message: 'VR头显 #OCU-2023-4567 已超期未归还',
+    time: '5天前',
     read: true
   }
 ];
@@ -82,9 +82,9 @@ const NotificationsDropdown: React.FC<NotificationsDropdownProps> = ({ onClose }
     >
       <div className="px-4 py-2 border-b border-gray-100">
         <div className="flex items-center justify-between">
-          <h3 className="text-sm font-semibold text-gray-700">Notifications</h3>
+          <h3 className="text-sm font-semibold text-gray-700">通知</h3>
           <span className="text-xs font-medium bg-primary-100 text-primary-800 px-2 py-1 rounded-full">
-            {mockNotifications.filter(n => !n.read).length} new
+            {mockNotifications.filter(n => !n.read).length} 条新通知
           </span>
         </div>
       </div>
@@ -117,17 +117,17 @@ const NotificationsDropdown: React.FC<NotificationsDropdownProps> = ({ onClose }
           </div>
         ) : (
           <div className="py-4 text-center text-gray-500 text-sm">
-            No notifications
+            暂无通知
           </div>
         )}
       </div>
 
       <div className="px-4 py-2 border-t border-gray-100">
         <button className="text-xs text-primary-600 hover:text-primary-800 font-medium">
-          Mark all as read
+          标记所有为已读
         </button>
         <button className="text-xs text-primary-600 hover:text-primary-800 font-medium float-right">
-          View all
+          查看全部
         </button>
       </div>
     </div>

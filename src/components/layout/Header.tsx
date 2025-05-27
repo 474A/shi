@@ -11,24 +11,24 @@ interface HeaderProps {
 const pageTitle = (pathname: string): string => {
   switch (pathname) {
     case '/':
-      return 'Dashboard';
+      return '仪表盘';
     case '/equipment':
-      return 'Equipment Catalog';
+      return '设备目录';
     case '/reservations':
-      return 'Reservations';
+      return '预约管理';
     case '/maintenance':
-      return 'Maintenance';
+      return '维护管理';
     case '/profile':
-      return 'User Profile';
+      return '个人中心';
     case '/reports':
-      return 'Reports';
+      return '统计报表';
     case '/system':
-      return 'System Settings';
+      return '系统设置';
     default:
       if (pathname.startsWith('/equipment/')) {
-        return 'Equipment Details';
+        return '设备详情';
       }
-      return 'University Equipment Management';
+      return '高校设备管理系统';
   }
 };
 
@@ -61,7 +61,7 @@ const Header: React.FC<HeaderProps> = ({ toggleSidebar }) => {
               </div>
               <input
                 type="text"
-                placeholder="Search..."
+                placeholder="搜索..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent w-64 text-sm"
@@ -86,7 +86,7 @@ const Header: React.FC<HeaderProps> = ({ toggleSidebar }) => {
               <div className="w-8 h-8 rounded-full overflow-hidden border border-gray-300">
                 <img
                   src={user?.avatar || 'https://images.pexels.com/photos/1699159/pexels-photo-1699159.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'}
-                  alt={user?.name || 'User'}
+                  alt={user?.name || '用户'}
                   className="w-full h-full object-cover"
                 />
               </div>

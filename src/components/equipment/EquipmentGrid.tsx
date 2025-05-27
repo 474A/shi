@@ -12,7 +12,7 @@ interface EquipmentGridProps {
 const EquipmentGrid: React.FC<EquipmentGridProps> = ({ 
   equipment, 
   isLoading,
-  emptyMessage = "No equipment found. Try adjusting your filters."
+  emptyMessage = "未找到设备。请尝试调整筛选条件。"
 }) => {
   if (isLoading) {
     return (
@@ -27,7 +27,7 @@ const EquipmentGrid: React.FC<EquipmentGridProps> = ({
       <div className="flex flex-col items-center justify-center h-64 text-center">
         <img 
           src="https://images.pexels.com/photos/7241418/pexels-photo-7241418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-          alt="No equipment" 
+          alt="没有设备" 
           className="w-32 h-32 object-cover rounded-full mb-4 opacity-50"
         />
         <p className="text-gray-500 mb-2">{emptyMessage}</p>
